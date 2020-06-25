@@ -1,5 +1,9 @@
 #!/usr/bin/env ruby
 
-puts 'ABBC'
-puts 'B  B'
-puts 'DBBE'
+if ARGV.size != 2
+  puts 'Error: Wrong arguments'
+  puts 'Usage: ./rectangle ${width} ${length}'
+  return
+end
+
+puts 'lol'
