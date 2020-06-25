@@ -20,6 +20,24 @@ describe 'rectangle' do
       OUTPUT
       expect(output).to eq expected
     end
+
+    it do
+      output = %x[./rectangle -1 3]
+      expected =<<~OUTPUT
+      Error: ${width} and ${length} arguments must be positive integers.
+      Usage: ./rectangle ${width} ${length}
+      OUTPUT
+      expect(output).to eq expected
+    end
+
+    it do
+      output = %x[./rectangle 3 0]
+      expected =<<~OUTPUT
+      Error: ${width} and ${length} arguments must be positive integers.
+      Usage: ./rectangle ${width} ${length}
+      OUTPUT
+      expect(output).to eq expected
+    end
   end
 
   it do

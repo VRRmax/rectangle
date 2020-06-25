@@ -6,4 +6,10 @@ if ARGV.size != 2
   return
 end
 
+if ARGV[0].to_i < 1 || ARGV[1].to_i < 1
+  puts 'Error: ${width} and ${length} arguments must be positive integers.'
+  puts 'Usage: ./rectangle ${width} ${length}'
+  return
+end
+
 puts 'lol'
