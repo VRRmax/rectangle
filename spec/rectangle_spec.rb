@@ -41,18 +41,12 @@ describe 'rectangle' do
   end
 
   it do
-    output = %x[./rectangle 1 2]
-    expected =<<~OUTPUT
-    lol
-    OUTPUT
-    expect(output).to eq expected
-  end
-  xit do
     output = %x[./rectangle 4 4]
     expected =<<~OUTPUT
-    ABBC
-    B  B
-    DBBE
+    AAAA
+    AAAA
+    AAAA
+    AAAA
     OUTPUT
     expect(output).to eq expected
   end

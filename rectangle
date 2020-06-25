@@ -1,15 +1,27 @@
 #!/usr/bin/env ruby
 
+def print_character
+  print 'A'
+end
+
 if ARGV.size != 2
   puts 'Error: Wrong arguments'
   puts 'Usage: ./rectangle ${width} ${length}'
   return
 end
 
-if ARGV[0].to_i < 1 || ARGV[1].to_i < 1
+width = ARGV[0].to_i
+length = ARGV[1].to_i
+
+if width < 1 || length < 1
   puts 'Error: ${width} and ${length} arguments must be positive integers.'
   puts 'Usage: ./rectangle ${width} ${length}'
   return
 end
 
-puts 'lol'
+length.times do |line|
+  width.times do |column|
+    print_character
+  end
+  puts ''
+end
