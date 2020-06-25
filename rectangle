@@ -1,11 +1,5 @@
 #!/usr/bin/env ruby
 
-def main
-  'lol'
-end
-
-def display_on_terminal(str:)
-  puts str
-end
-
-display_on_terminal(str: main)
+puts 'ABBC'
+puts 'B  B'
+puts 'DBBE'
