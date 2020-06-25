@@ -1,3 +1,11 @@
 #!/usr/bin/env ruby
 
-puts 'lol'
+def main
+  'lol'
+end
+
+def display_on_terminal(str:)
+  puts str
+end
+
+display_on_terminal(str: main)
