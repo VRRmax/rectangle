@@ -43,10 +43,10 @@ describe 'rectangle' do
   it do
     output = %x[./rectangle 4 4]
     expected =<<~OUTPUT
-    AAAA
-    AAAA
-    AAAA
-    AAAA
+    A..B
+    .  .
+    .  .
+    C..D
     OUTPUT
     expect(output).to eq expected
   end

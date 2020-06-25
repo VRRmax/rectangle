@@ -1,7 +1,39 @@
 #!/usr/bin/env ruby
 
-def print_character
-  print 'A'
+def top_left(x, y)
+  x == 1 && y == 1
+end
+
+def top_right(x, y, width)
+  x == width && y == 1
+end
+
+def bottom_left(x, y, length)
+  x == 1 && y == length
+end
+
+def bottom_right(x, y, width, length)
+  x == width && y == length
+end
+
+def in_the_middle(x, y, width, length)
+  x != 1 && x != width && y != 1 && y != length
+end
+
+def print_character(x, y, width, length)
+  if top_left(x, y)
+    print 'A'
+  elsif top_right(x, y, width)
+    print 'B'
+  elsif bottom_left(x, y, length)
+    print 'C'
+  elsif bottom_right(x, y, width, length)
+    print 'D'
+  elsif in_the_middle(x, y, width, length)
+    print ' '
+  else
+    print '.'
+  end
 end
 
 if ARGV.size != 2
@@ -19,9 +51,9 @@ if width < 1 || length < 1
   return
 end
 
-length.times do |line|
-  width.times do |column|
-    print_character
+length.times.with_index(1) do |line, y|
+  width.times.with_index(1) do |column, x|
+    print_character(x, y, width, length)
   end
   puts ''
 end
